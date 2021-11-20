@@ -27,7 +27,7 @@ export default class Team {
    * @param {object} characters - an array of Characters
    */
   addAll(...characters) {
-    this.members = new Set([...this.members, ...characters]);
+    characters.forEach((character) => this.members.add(character));
   }
 
   /**
